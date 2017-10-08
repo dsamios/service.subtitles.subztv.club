@@ -4,11 +4,9 @@ SubzTV addon for Kodi
 
 About
 -----
-Search and download subtitles from subztv.gr
+Search and download subtitles from subztv.club
 
-Kodi Addon for http://subztv.gr/
-
-This service is not published nor endorsed by subztv.gr
+Kodi Addon for http://subztv.club/
 
 
 Artwork
@@ -23,3 +21,7 @@ License
 This software is released under the [GPL 3.0 license] [1].
 
 [1]: http://www.gnu.org/licenses/gpl-3.0.html
+
+Original Source Code
+--------------------
+https://github.com/lambda81/

@@ -25,7 +25,7 @@ from lamlib import client
 from lamlib import control
 
 
-class subztvgr:
+class subztvclub:
     def __init__(self):
         self.list = []
 
@@ -40,7 +40,7 @@ class subztvgr:
 
                 query = ' '.join(urllib.unquote_plus(re.sub('%\w\w', ' ', urllib.quote_plus(title))).split())
 
-                url = 'http://subztv.gr/search?q=%s' % urllib.quote_plus(query)
+                url = 'http://subztv.club/search?q=%s' % urllib.quote_plus(query)
 
                 result = client.request(url)
                 result = re.sub(r'[^\x00-\x7F]+', ' ', result)
@@ -48,7 +48,7 @@ class subztvgr:
                 url = client.parseDOM(result, 'div', attrs = {'id': 'movies'})[0]
                 url = re.findall('(/movies/\d+)', url)
                 url = [x for y,x in enumerate(url) if x not in url[:y]]
-                url = [urlparse.urljoin('http://subztv.gr', i) for i in url]
+                url = [urlparse.urljoin('http://subztv.club', i) for i in url]
                 url = url[:3]
 
                 for i in url:
@@ -69,7 +69,7 @@ class subztvgr:
 
                 query = ' '.join(urllib.unquote_plus(re.sub('%\w\w', ' ', urllib.quote_plus(title))).split())
 
-                url = 'http://subztv.gr/search?q=%s' % urllib.quote_plus(query)
+                url = 'http://subztv.club/search?q=%s' % urllib.quote_plus(query)
 
                 result = client.request(url)
                 result = re.sub(r'[^\x00-\x7F]+', ' ', result)
@@ -77,7 +77,7 @@ class subztvgr:
                 url = client.parseDOM(result, 'div', attrs = {'id': 'series'})[0]
                 url = re.findall('(/series/\d+)', url)
                 url = [x for y,x in enumerate(url) if x not in url[:y]]
-                url = [urlparse.urljoin('http://subztv.gr', i) for i in url]
+                url = [urlparse.urljoin('http://subztv.club', i) for i in url]
                 url = url[:3]
 
                 for i in url:
@@ -110,7 +110,7 @@ class subztvgr:
                 url = client.replaceHTMLCodes(url)
                 url = url.encode('utf-8')
 
-                self.list.append({'name': name, 'url': url, 'source': 'subztvgr', 'rating': 5})
+                self.list.append({'name': name, 'url': url, 'source': 'subztvclub', 'rating': 5})
             except:
                 pass
 

@@ -19,7 +19,7 @@
 import xbmc
 import urllib,urlparse,re,os
 
-from resources.lib import subztvgr
+from resources.lib import subztvclub
 from lamlib import control
 from lamlib import workers
 
@@ -66,7 +66,7 @@ class search:
 
         threads = []
 
-        threads.append(workers.Thread(self.subztvgr))
+        threads.append(workers.Thread(self.subztvclub))
 
         [i.start() for i in threads]
 
@@ -103,8 +103,8 @@ class search:
         control.directory(int(sys.argv[1]))
 
 
-    def subztvgr(self):
-        self.list.extend(subztvgr.subztvgr().get(self.query))
+    def subztvclub(self):
+        self.list.extend(subztvclub.subztvclub().get(self.query))
 
 
 class download:
@@ -119,7 +119,7 @@ class download:
 
         control.makeFile(path)
 
-        subtitle = subztvgr.subztvgr().download(path, url)
+        subtitle = subztvclub.subztvclub().download(path, url)
 
         if not subtitle == None:
             item = control.item(label=subtitle)

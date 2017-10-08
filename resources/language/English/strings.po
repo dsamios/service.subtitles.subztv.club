@@ -1,6 +1,6 @@
 # Kodi Media Center language file
 # Addon Name: SubzTV
-# Addon id: service.subtitles.subztv.gr
+# Addon id: service.subtitles.subztv.club
 # Addon version: 1.0.0
 # Addon Provider: lambda
 
