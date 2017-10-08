@@ -1,6 +1,8 @@
 ======================
 SubzTV addon for Kodi
 ======================
+If you want to help with the subtitles contact SubzTV
+info@subztv.club
 
 About
 -----
